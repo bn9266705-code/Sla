@@ -1,0 +1,40 @@
+VER: 2.19.0(25080350)
+PERMISSION: APP
+ABI: arm64-v8a
+MODEL: moto g05
+SDK: 35
+RELEASE: 15
+TARGET_SDK: 30
+---StackTrace---
+android.app.RemoteServiceException$ForegroundServiceDidNotStartInTimeException: Context.startForegroundService() did not then call Service.startForeground(): ServiceRecord{d1fda0d u0 bin.mt.plus/l.۫ܶܺ c:bin.mt.plus}
+	at android.app.ActivityThread.generateForegroundServiceDidNotStartInTimeException(ActivityThread.java:2313)
+	at android.app.ActivityThread.throwRemoteServiceException(ActivityThread.java:2281)
+	at android.app.ActivityThread.-$$Nest$mthrowRemoteServiceException(ActivityThread.java:0)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2599)
+	at android.os.Handler.dispatchMessage(Handler.java:107)
+	at android.os.Looper.loopOnce(Looper.java:234)
+	at android.os.Looper.loop(Looper.java:319)
+	at android.app.ActivityThread.main(ActivityThread.java:8754)
+	at java.lang.reflect.Method.invoke(Native Method)
+	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:602)
+	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:962)
+Caused by: android.app.StackTrace: Last startServiceCommon() call for this service was made here
+	at android.app.ContextImpl.startServiceCommon(ContextImpl.java:2004)
+	at android.app.ContextImpl.startForegroundService(ContextImpl.java:1958)
+	at android.content.ContextWrapper.startForegroundService(ContextWrapper.java:853)
+	at android.content.ContextWrapper.startForegroundService(ContextWrapper.java:853)
+	at l.᩹֫.᩷(P4LZ:1128)
+	at l.ۜ֫.᩷(K4M2:700)
+	at l.ܰܶܺ.᩷(45Z7:369)
+	at l.֫ܶܺ.onCreate(B8UE:358)
+	at android.app.Activity.performCreate(Activity.java:9048)
+	at android.app.Activity.performCreate(Activity.java:9026)
+	at android.app.Instrumentation.callActivityOnCreate(Instrumentation.java:1526)
+	at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:4072)
+	at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:4277)
+	at android.app.servertransaction.LaunchActivityItem.execute(LaunchActivityItem.java:112)
+	at android.app.servertransaction.TransactionExecutor.executeNonLifecycleItem(TransactionExecutor.java:174)
+	at android.app.servertransaction.TransactionExecutor.executeTransactionItems(TransactionExecutor.java:109)
+	at android.app.servertransaction.TransactionExecutor.execute(TransactionExecutor.java:81)
+	at android.app.ActivityThread$H.handleMessage(ActivityThread.java:2678)
+	... 7 more
